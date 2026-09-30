@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Deep Work Pomodoro &amp; Ambient Noise Machine - Focus Soundscape</title>
+  <title>Deep Work Pomodoro &amp; Ambient Noise | Focus Soundscape</title>
   <link>https://us-pomodoro-soundscape.enjoy-onepage.com/</link>
-  <description>Synthesize pure lossless white, pink, and brown noise in real time while tracking daily pomodoro focus streaks on a GitHub-style activity grid.</description>
+  <description>Free Pomodoro timer with white, pink and brown noise made in your browser. Set focus and break lengths, and track focus minutes and a 28-day streak.</description>
   <language>en-us</language>
   <atom:link href="https://us-pomodoro-soundscape.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 29 Sep 2026 06:02:38 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 30 Sep 2026 01:52:28 +0000</lastBuildDate>
   <item>
-    <title>Deep Work &amp; Binaural Acoustics Master Guide - The Science of Flow</title>
-    <link>https://us-pomodoro-soundscape.enjoy-onepage.com/guides/guide.html</link>
-    <guid isPermaLink="true">https://us-pomodoro-soundscape.enjoy-onepage.com/guides/guide.html</guid>
-    <description>Deep Work &amp; Binaural Acoustics Master Guide - The Science of Flow</description>
-    <pubDate>Mon, 21 Sep 2026 22:22:37 +0900</pubDate>
+    <title>Disclaimer | Deep Work Pomodoro &amp; Ambient Noise</title>
+    <link>https://us-pomodoro-soundscape.enjoy-onepage.com/disclaimer.html</link>
+    <guid isPermaLink="true">https://us-pomodoro-soundscape.enjoy-onepage.com/disclaimer.html</guid>
+    <description>Disclaimer for the Deep Work Pomodoro &amp; Ambient Noise.</description>
+    <pubDate>Wed, 30 Sep 2026 01:52:28 +0000</pubDate>
   </item>
   <item>
-    <title>Terms of Service - Deep Work Pomodoro</title>
-    <link>https://us-pomodoro-soundscape.enjoy-onepage.com/terms.html</link>
-    <guid isPermaLink="true">https://us-pomodoro-soundscape.enjoy-onepage.com/terms.html</guid>
-    <description>Terms of Service - Deep Work Pomodoro</description>
-    <pubDate>Mon, 21 Sep 2026 22:22:37 +0900</pubDate>
-  </item>
-  <item>
-    <title>Privacy Policy - Deep Work Pomodoro</title>
+    <title>Privacy Policy | Deep Work Pomodoro &amp; Ambient Noise</title>
     <link>https://us-pomodoro-soundscape.enjoy-onepage.com/privacy.html</link>
     <guid isPermaLink="true">https://us-pomodoro-soundscape.enjoy-onepage.com/privacy.html</guid>
-    <description>Privacy Policy - Deep Work Pomodoro</description>
-    <pubDate>Mon, 21 Sep 2026 22:22:37 +0900</pubDate>
+    <description>Privacy Policy for the Deep Work Pomodoro &amp; Ambient Noise.</description>
+    <pubDate>Wed, 30 Sep 2026 01:52:28 +0000</pubDate>
+  </item>
+  <item>
+    <title>Terms of Service | Deep Work Pomodoro &amp; Ambient Noise</title>
+    <link>https://us-pomodoro-soundscape.enjoy-onepage.com/terms.html</link>
+    <guid isPermaLink="true">https://us-pomodoro-soundscape.enjoy-onepage.com/terms.html</guid>
+    <description>Terms of Service for the Deep Work Pomodoro &amp; Ambient Noise.</description>
+    <pubDate>Wed, 30 Sep 2026 01:52:28 +0000</pubDate>
   </item>
 </channel>
 </rss>

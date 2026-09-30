@@ -1,475 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Work Pomodoro &amp; Ambient Noise | Focus Soundscape</title>
-    <meta name="description" content="Synthesize pure lossless white, pink, and brown noise in real time while tracking daily pomodoro focus streaks on a GitHub-style activity grid.">
-    <link rel="canonical" href="https://us-pomodoro-soundscape.enjoy-onepage.com/">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta property="og:title" content="Deep Work Pomodoro & Ambient Noise Machine">
-    <meta property="og:description" content="Lossless real-time white/pink/brown noise generator paired with a Pomodoro session tracker.">
-    <meta property="og:image" content="https://us-pomodoro-soundscape.enjoy-onepage.com/og-image.png">
-    <meta property="og:url" content="https://us-pomodoro-soundscape.enjoy-onepage.com/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Deep Work Pomodoro & Ambient Noise Machine">
-    <meta name="twitter:description" content="Lossless focus noise synthesizer and pomodoro streak tracker">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style id="mobile-hardening-shield">
-        html, body { max-width: 100%; overflow-x: hidden; }
-        .manual-ad-box { width: 100%; max-width: 960px; overflow: hidden; margin: 8px auto 16px; }
-        .manual-ad-box ins { max-width: 100% !important; overflow: hidden !important; }
-    </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-    <script type="application/ld+json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep Work Pomodoro &amp; Ambient Noise | Focus Soundscape</title>
+<meta name="description" content="Free Pomodoro timer with white, pink and brown noise made in your browser. Set focus and break lengths, and track focus minutes and a 28-day streak.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://us-pomodoro-soundscape.enjoy-onepage.com/">
+<meta name="theme-color" content="#047857">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Deep Work Pomodoro &amp; Ambient Noise">
+<meta property="og:title" content="Deep Work Pomodoro &amp; Ambient Noise | Focus Soundscape">
+<meta property="og:description" content="Free Pomodoro timer with white, pink and brown noise made in your browser. Set focus and break lengths, and track focus minutes and a 28-day streak.">
+<meta property="og:url" content="https://us-pomodoro-soundscape.enjoy-onepage.com/">
+<meta property="og:image" content="https://us-pomodoro-soundscape.enjoy-onepage.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deep Work Pomodoro &amp; Ambient Noise | Focus Soundscape">
+<meta name="twitter:description" content="Free Pomodoro timer with white, pink and brown noise made in your browser. Set focus and break lengths, and track focus minutes and a 28-day streak.">
+<meta name="twitter:image" content="https://us-pomodoro-soundscape.enjoy-onepage.com/og-image.png">
+<link rel="alternate" type="application/rss+xml" title="Deep Work Pomodoro RSS" href="https://us-pomodoro-soundscape.enjoy-onepage.com/rss.xml">
+<link rel="sitemap" type="application/xml" href="https://us-pomodoro-soundscape.enjoy-onepage.com/sitemap.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Deep Work Pomodoro & Soundscape",
-      "inLanguage": "en-US",
-      "applicationCategory": "ProductivityApplication",
+      "@id": "https://us-pomodoro-soundscape.enjoy-onepage.com/#webapp",
+      "name": "Deep Work Pomodoro & Ambient Noise",
+      "url": "https://us-pomodoro-soundscape.enjoy-onepage.com/",
+      "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "All",
-      "offers": { "@type": "Offer", "price": "0" }
+      "inLanguage": "en",
+      "description": "A free Pomodoro timer with focus, short break and long break intervals, white, pink and brown background noise generated in the browser, and a local focus log with a 28-day grid and streak.",
+      "image": "https://us-pomodoro-soundscape.enjoy-onepage.com/og-image.png",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://us-pomodoro-soundscape.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "How does the Pomodoro Technique work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Pick one task, set a timer for 25 minutes and work only on that task until it rings. Then take a 5-minute break, and after every four pomodoros take a longer break of 15 to 30 minutes. This timer starts with 25, 5 and 15 minutes, and you can change each length." } },
+        { "@type": "Question", "name": "What is the difference between white, pink and brown noise?",
+          "acceptedAnswer": { "@type": "Answer", "text": "White noise has the same power at every frequency, so it sounds bright, like hiss. Pink noise has the same power in every octave, so its power falls about 3 dB per octave and it sounds softer. Brown noise falls about 6 dB per octave and sounds like a deep rumble. All three are made in your browser from random numbers and set to the same average level." } },
+        { "@type": "Question", "name": "Does the timer stay accurate in a background tab?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The timer counts down to a fixed end time on your device clock instead of counting ticks, so it stays correct when your browser slows down background tabs. The end chime is scheduled on the audio clock when you press Start, so it can play on time while you work in another tab. Time your computer spends asleep counts as time passed." } },
+        { "@type": "Question", "name": "How are my focus minutes and streak counted?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only focus sessions that run to the end count; breaks, skipped and reset sessions do not. Each finished session adds its full length and is filed under your device's local date when it ends. Your streak is the number of days in a row with at least one finished focus session, up to today, or up to yesterday if you have not finished one yet today." } },
+        { "@type": "Question", "name": "Is my data saved or sent anywhere?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your focus log and settings are saved only in this browser's local storage and are never sent to us. The sounds are generated on your device and nothing is recorded. Press Clear log twice to delete the log." } }
+      ]
     }
-    </script>
-    <link rel="alternate" type="application/rss+xml" title="Deep Work Pomodoro &amp; Ambient Noise | Focus Soundscape" href="https://us-pomodoro-soundscape.enjoy-onepage.com/rss.xml">
-    <link rel="sitemap" type="application/xml" href="https://us-pomodoro-soundscape.enjoy-onepage.com/sitemap.xml">
+  ]
+}
+</script>
+<!-- ADSENSE START: loader -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+<!-- ADSENSE END: loader -->
+<style>
+:root{--bg:#f3f7f5;--card:#fff;--ink:#132a22;--muted:#4b5b55;--accent:#047857;--brk:#1d4ed8;--line:#dde7e2;--r:#b91c1c}
+*{box-sizing:border-box}
+html,body{margin:0;max-width:100%;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.header{background:linear-gradient(135deg,#064e3b,#047857);color:#fff;text-align:center;padding:26px 16px 22px}
+.header h1{margin:0;font-size:1.7rem}
+.header-sub{color:#ecfdf5;margin-top:6px;font-size:.95rem}
+.wrap{max-width:1080px;margin:0 auto;padding:12px 14px 8px}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:1024px){.grid2{grid-template-columns:3fr 2fr;align-items:start}.result{position:sticky;top:12px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:14px 0}
+.grid2 .card{margin:0}
+.card h2{font-size:1.15rem;margin:4px 0 10px}
+.card h3{font-size:1rem;margin:16px 0 6px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{font-weight:600;font-size:.95rem;margin-bottom:4px;padding:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pills label{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:.95rem}
+.pills label:has(input:checked){border-color:var(--accent);background:#ecfdf5;font-weight:700}
+.clock-box{text-align:center;margin:12px 0 4px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#f7faf8}
+.clock{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:clamp(3.2rem,13vw,5.4rem);font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1;color:var(--accent)}
+.mode-break .clock{color:var(--brk)}
+.phase{font-size:.95rem;color:var(--muted);margin:4px 0 10px}
+.bar{height:10px;border-radius:999px;background:#e3ebe7;overflow:hidden}
+.bar div{height:100%;width:0;background:var(--accent)}
+.mode-break .bar div{background:var(--brk)}
+.btn{font:inherit;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:9px 14px;cursor:pointer}
+.btn.sm{padding:5px 10px;font-size:.88rem;border-radius:8px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700;min-width:8.5em}
+.mode-break .btn.primary{background:var(--brk);border-color:var(--brk)}
+.btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.lens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.field{display:block;font-size:.9rem;font-weight:600;margin-bottom:3px}
+input[type=number]{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+input[aria-invalid="true"]{border-color:var(--r)}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.err{color:var(--r);font-size:.82rem;margin:3px 0 0;min-height:1.1em}
+.opts{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:8px}
+.check{display:flex;align-items:center;gap:6px;font-size:.95rem;cursor:pointer}
+.hint{font-size:.86rem;color:var(--muted);margin:6px 0}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:8px 10px}
+.kpi .v{font-size:1.3rem;font-weight:800;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.kpi .k{font-size:.82rem;color:var(--muted)}
+.kpi.big{grid-column:1 / -1;background:#ecfdf5;border-color:#a7f3d0}
+.kpi.big .v{font-size:2rem}
+.grid28{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;list-style:none;padding:0;margin:8px 0}
+.grid28 li{aspect-ratio:1;border-radius:5px;border:1px solid #c9d8d0;background:#f1f5f3;min-width:0}
+.lv1{background:#bbf7d0 !important;border-color:#86efac !important}
+.lv2{background:#4ade80 !important;border-color:#22c55e !important}
+.lv3{background:#16a34a !important;border-color:#15803d !important}
+.lv4{background:#14532d !important;border-color:#14532d !important}
+.grid28 li.today{outline:2px solid var(--ink);outline-offset:1px}
+.legend{display:flex;align-items:center;gap:4px;font-size:.82rem;color:var(--muted);margin:4px 0}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;border:1px solid #c9d8d0;background:#f1f5f3}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.faq-item h3{font-size:1rem;margin:12px 0 4px}
+.faq-item p{margin:0;color:#34443e}
+.notice{border-color:#fcd34d;background:#fffbeb}
+.ad-box{max-width:1080px;margin:10px auto;padding:0 14px;background:transparent;overflow:hidden;text-align:center}
+.ad-top ins{max-height:90px}
+.footer{text-align:center;font-size:.85rem;color:var(--muted);padding:18px 14px 28px}
+.footer a{color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#132a22;color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;max-width:90vw}
+.toast.show{opacity:1}
+@media (max-width:420px){.lens{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){.toast{transition:none}}
+</style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans">
-    <!-- Header -->
-    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <span class="text-xl">🍅</span>
-                <span class="font-black tracking-tight text-white text-lg">DeepFocus US</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <a href="/guides/guide.html" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 py-1.5 px-3 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/10 transition">Focus Guide</a>
-                <button id="wakeLockBtn" onclick="toggleWakeLock()" class="text-xs font-semibold text-slate-300 hover:text-white py-1.5 px-3 rounded-lg bg-slate-800 border border-slate-700 transition flex items-center gap-1">
-                    <span id="wakeIcon">💡</span> <span id="wakeText">Keep Screen ON</span>
-                </button>
-            </div>
+<body>
+<header class="header">
+  <h1>Deep Work Pomodoro &amp; Ambient Noise</h1>
+  <div class="header-sub">Pomodoro timer · white, pink &amp; brown noise · focus log with a 28-day streak</div>
+</header>
+
+<!-- ADSENSE START: top -->
+<div class="ad-box ad-top">
+  <ins class="adsbygoogle" style="display:block;height:60px;max-height:90px" data-ad-client="ca-pub-2228289204702106" data-ad-slot="3824727725" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: top -->
+
+<main class="wrap">
+  <div class="grid2">
+    <section class="card mode-focus" id="timer-card" aria-labelledby="t-h">
+      <h2 id="t-h">1. Timer</h2>
+      <fieldset id="modes">
+        <legend>Interval</legend>
+        <div class="pills">
+          <label><input type="radio" name="mode" value="focus" checked> Focus</label>
+          <label><input type="radio" name="mode" value="short"> Short break</label>
+          <label><input type="radio" name="mode" value="long"> Long break</label>
         </div>
-    </header>
+      </fieldset>
+      <div class="clock-box">
+        <div class="clock" id="time">25:00</div>
+        <div class="phase" id="phase">Focus · pomodoro 1 of 4 · ready</div>
+        <div class="bar" id="bar-wrap" role="progressbar" aria-label="Time passed in this interval" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="bar"></div></div>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn primary" id="btn-start">▶ Start</button>
+        <button type="button" class="btn" id="btn-reset">↺ Reset</button>
+        <button type="button" class="btn" id="btn-skip">⏭ Skip</button>
+      </div>
 
-    <!-- Top AdSense -->
-    <div class="manual-ad-box">
-        <ins class="adsbygoogle"
-             style="display:block;height:60px;max-height:60px;"
-             data-ad-client="ca-pub-2228289204702106"
-             data-ad-slot="3824727725"
-             data-ad-format="horizontal"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
+      <h3>Lengths (minutes)</h3>
+      <div class="lens">
+        <div><label class="field" for="len-focus">Focus</label><input id="len-focus" type="number" inputmode="numeric" min="1" max="180" step="1" value="25" aria-describedby="err-focus"><p class="err" id="err-focus" aria-live="polite"></p></div>
+        <div><label class="field" for="len-short">Short break</label><input id="len-short" type="number" inputmode="numeric" min="1" max="60" step="1" value="5" aria-describedby="err-short"><p class="err" id="err-short" aria-live="polite"></p></div>
+        <div><label class="field" for="len-long">Long break</label><input id="len-long" type="number" inputmode="numeric" min="1" max="60" step="1" value="15" aria-describedby="err-long"><p class="err" id="err-long" aria-live="polite"></p></div>
+      </div>
+      <p class="hint" id="len-note">Every fourth finished focus session is followed by a long break.</p>
+      <div class="opts">
+        <label class="check"><input type="checkbox" id="chime" checked> Play a chime when an interval ends</label>
+        <button type="button" class="btn sm" id="btn-wake" aria-pressed="false">💡 Keep screen on: Off</button>
+      </div>
 
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 py-6 flex-grow w-full">
-        <div class="text-center mb-8">
-            <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-2">Deep Work Pomodoro & Ambient Noise Machine</h1>
-            <p class="text-slate-400 text-sm max-w-2xl mx-auto">Lossless real-time white, pink, and brown noise synthesizer paired with an interval productivity timer and streak grid.</p>
-        </div>
+      <h3>Background noise</h3>
+      <div class="pills" role="group" aria-label="Noise color">
+        <button type="button" class="btn noise" id="n-white" data-noise="white" aria-pressed="false">White</button>
+        <button type="button" class="btn noise" id="n-pink" data-noise="pink" aria-pressed="false">Pink</button>
+        <button type="button" class="btn noise" id="n-brown" data-noise="brown" aria-pressed="false">Brown</button>
+        <span class="hint" id="noise-status">Sound is off.</span>
+      </div>
+      <label class="field" for="vol">Volume: <output id="vol-out" for="vol">25%</output></label>
+      <input type="range" id="vol" min="0" max="100" step="1" value="25">
+    </section>
 
-        <!-- 2-Column Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            <!-- Left Col -->
-            <div class="lg:col-span-6 bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
-                <!-- Interval Selection -->
-                <div>
-                    <h2 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Select Interval
-                    </h2>
-                    <div class="grid grid-cols-3 gap-2">
-                        <button onclick="setMode('focus', 25)" id="modeBtnFocus" class="py-3 px-2 bg-emerald-600 text-white font-bold rounded-xl text-xs sm:text-sm border border-emerald-500 transition">25m Focus</button>
-                        <button onclick="setMode('shortBreak', 5)" id="modeBtnShort" class="py-3 px-2 bg-slate-800 text-slate-300 hover:text-white font-bold rounded-xl text-xs sm:text-sm border border-slate-700 transition">5m Break</button>
-                        <button onclick="setMode('longBreak', 15)" id="modeBtnLong" class="py-3 px-2 bg-slate-800 text-slate-300 hover:text-white font-bold rounded-xl text-xs sm:text-sm border border-slate-700 transition">15m Long</button>
-                    </div>
-                </div>
+    <section class="card result" id="log" aria-labelledby="l-h">
+      <h2 id="l-h">2. Your focus log</h2>
+      <div class="kpis">
+        <div class="kpi big"><div class="v" id="r-today">0 min</div><div class="k" id="r-today-n">0 focus sessions today</div></div>
+        <div class="kpi"><div class="v" id="r-streak">0 days</div><div class="k">current streak</div></div>
+        <div class="kpi"><div class="v" id="r-28">0 min</div><div class="k">focus time, last 28 days</div></div>
+      </div>
+      <h3>Last 28 days</h3>
+      <ol class="grid28" id="grid" aria-label="Focus time for each of the last 28 days, oldest first"></ol>
+      <p class="hint" id="g-range"></p>
+      <p class="legend" aria-hidden="true">Less <i></i><i class="lv1"></i><i class="lv2"></i><i class="lv3"></i><i class="lv4"></i> More</p>
+      <p class="hint">Squares: 0 · 1–29 · 30–59 · 60–119 · 120+ focus minutes. Active days: <b id="r-active">0 of 28</b>.</p>
+      <div class="actions">
+        <button type="button" class="btn" id="btn-copy">📋 Copy</button>
+        <button type="button" class="btn" id="btn-share">📤 Share</button>
+        <button type="button" class="btn sm" id="btn-clear">Clear log</button>
+      </div>
+      <p class="hint" id="save-note"></p>
+    </section>
+  </div>
 
-                <!-- Custom Time Input -->
-                <div class="pt-4 border-t border-slate-800">
-                    <label class="block text-xs font-semibold text-slate-400 mb-1" for="customMinutes">Custom Duration (Minutes)</label>
-                    <div class="flex gap-2">
-                        <input type="number" id="customMinutes" value="25" min="1" max="180" class="flex-grow bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-base text-white focus:ring-2 focus:ring-emerald-500 outline-none">
-                        <button onclick="applyCustomTime()" class="h-11 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl border border-slate-700 transition shrink-0">Apply</button>
-                    </div>
-                </div>
+<!-- ADSENSE START: mid (right after the result card) -->
+<div class="ad-box ad-mid">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="1186914926" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: mid -->
 
-                <!-- Noise Synthesizer -->
-                <div class="pt-4 border-t border-slate-800 space-y-4">
-                    <h3 class="text-sm font-bold text-white flex items-center justify-between">
-                        <span>🎧 Web Audio Synthesizer</span>
-                        <span id="noiseStatus" class="text-xs font-normal text-slate-400">Off</span>
-                    </h3>
-                    <div class="grid grid-cols-3 gap-2">
-                        <button onclick="toggleNoise('white')" id="noiseBtnWhite" class="py-2.5 px-2 bg-slate-950 border border-slate-800 hover:border-slate-700 text-xs rounded-xl text-slate-300 font-semibold transition">White (Uniform)</button>
-                        <button onclick="toggleNoise('pink')" id="noiseBtnPink" class="py-2.5 px-2 bg-slate-950 border border-slate-800 hover:border-slate-700 text-xs rounded-xl text-slate-300 font-semibold transition">Pink (Rainfall)</button>
-                        <button onclick="toggleNoise('brown')" id="noiseBtnBrown" class="py-2.5 px-2 bg-slate-950 border border-slate-800 hover:border-slate-700 text-xs rounded-xl text-slate-300 font-semibold transition">Brown (Waterfall)</button>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs text-slate-400 mb-1">
-                            <span>Noise Volume</span>
-                            <span id="volumeText">25%</span>
-                        </div>
-                        <input type="range" id="volumeSlider" min="0" max="100" value="25" oninput="changeVolume(this.value)" class="w-full accent-emerald-500 cursor-pointer">
-                    </div>
-                </div>
+  <section class="card" aria-labelledby="how-h">
+    <h2 id="how-h">🧮 How the timer and log work</h2>
+    <ul>
+      <li><strong>Countdown:</strong> when you press Start, the page sets an end time on your device clock and always shows the time left until then. Pause keeps the time left, Reset starts the interval over, and Skip moves to the next interval without logging anything.</li>
+      <li><strong>Order:</strong> a finished focus session is followed by a short break, and every fourth one by a long break. After a break the timer switches back to focus. Nothing starts until you press Start, and the count of four starts over when you reload the page.</li>
+      <li><strong>Focus log:</strong> a finished focus session adds its full length (for example 50 minutes if you set 50) to the local date on which it ends. The log keeps the last 400 days in this browser.</li>
+      <li><strong>28-day grid:</strong> one square per day, oldest first and today last. Darker squares mean more focus time: 1–29, 30–59, 60–119 and 120 or more minutes.</li>
+      <li><strong>Noise:</strong> each color is a 10-second loop made in your browser with a short crossfade at the loop point, so there is no click when it repeats. Pink noise uses Paul Kellet's well-known filter and brown noise a leaky integrator of white noise.</li>
+    </ul>
+    <p class="hint">Pomodoro steps as summarized by Duke University's Academic Resource Center (checked September 30, 2026), based on the method Francesco Cirillo developed in the late 1980s.</p>
+  </section>
 
-                <!-- Main Action Buttons -->
-                <div class="pt-4 border-t border-slate-800 flex gap-3">
-                    <button id="startTimerBtn" onclick="toggleTimer()" class="h-12 flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-base transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
-                        <span id="playIcon">▶</span> <span id="playText">Start Session</span>
-                    </button>
-                    <button onclick="resetTimer()" class="h-12 px-5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-sm font-bold border border-slate-700 transition">
-                        Reset
-                    </button>
-                </div>
-            </div>
+  <section class="card" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">❓ Frequently asked questions</h2>
+    <div class="faq-item"><h3>How does the Pomodoro Technique work?</h3><p>Pick one task, set a timer for 25 minutes and work only on that task until it rings. Then take a 5-minute break, and after every four pomodoros take a longer break of 15 to 30 minutes. This timer starts with 25, 5 and 15 minutes, and you can change each length.</p></div>
+    <div class="faq-item"><h3>What is the difference between white, pink and brown noise?</h3><p>White noise has the same power at every frequency, so it sounds bright, like hiss. Pink noise has the same power in every octave, so its power falls about 3 dB per octave and it sounds softer. Brown noise falls about 6 dB per octave and sounds like a deep rumble. All three are made in your browser from random numbers and set to the same average level.</p></div>
+    <div class="faq-item"><h3>Does the timer stay accurate in a background tab?</h3><p>Yes. The timer counts down to a fixed end time on your device clock instead of counting ticks, so it stays correct when your browser slows down background tabs. The end chime is scheduled on the audio clock when you press Start, so it can play on time while you work in another tab. Time your computer spends asleep counts as time passed.</p></div>
+    <div class="faq-item"><h3>How are my focus minutes and streak counted?</h3><p>Only focus sessions that run to the end count; breaks, skipped and reset sessions do not. Each finished session adds its full length and is filed under your device's local date when it ends. Your streak is the number of days in a row with at least one finished focus session, up to today, or up to yesterday if you have not finished one yet today.</p></div>
+    <div class="faq-item"><h3>Is my data saved or sent anywhere?</h3><p>Your focus log and settings are saved only in this browser's local storage and are never sent to us. The sounds are generated on your device and nothing is recorded. Press Clear log twice to delete the log.</p></div>
+  </section>
 
-            <!-- Right Col -->
-            <div class="lg:col-span-6 space-y-6 lg:sticky lg:top-20">
-                <div class="bg-slate-900 border-2 border-slate-800 rounded-2xl p-6 shadow-2xl text-center">
-                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2" id="sessionLabel">Focus Session Active</div>
-                    <div id="timerDisplay" class="text-6xl sm:text-7xl font-mono font-black text-white tracking-tighter my-4">
-                        25:00
-                    </div>
-                    
-                    <div class="w-full bg-slate-950 h-3 rounded-full overflow-hidden border border-slate-800 my-4">
-                        <div id="sessionProgressBar" class="bg-emerald-500 h-full transition-all duration-500 w-0"></div>
-                    </div>
+  <section class="card notice" aria-labelledby="note-h">
+    <h2 id="note-h">⚠️ Please note</h2>
+    <p>This is a timer and sound tool, not medical advice. Keep the volume at a comfortable level, because loud sound over long periods can harm your hearing. Keep screen on needs a browser that supports it, and the browser may still let the screen turn off in battery saver mode; the page asks again when you come back to the tab.</p>
+  </section>
+</main>
 
-                    <!-- GitHub Style Activity Grid -->
-                    <div class="mt-6 pt-6 border-t border-slate-800 text-left">
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-bold text-slate-300">Daily Focus Grid (7x4 Sessions)</span>
-                            <span class="text-xs text-emerald-400 font-bold" id="completedSessionsText">0 Completed (0m)</span>
-                        </div>
-                        <div id="grassGrid" class="grid grid-cols-7 gap-2 p-3 bg-slate-950 rounded-xl border border-slate-800">
-                            <!-- 28 grass tiles -->
-                        </div>
-                    </div>
+<!-- ADSENSE START: bottom -->
+<div class="ad-box ad-bottom">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="3416334507" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: bottom -->
 
-                    <!-- Result Copy Button -->
-                    <div class="mt-6 pt-4 border-t border-slate-800 flex justify-end">
-                        <button onclick="copyFocusResults()" class="h-11 px-5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold rounded-xl text-xs transition flex items-center gap-2">
-                            <span>📋</span> Copy Results
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<footer class="footer">
+  <p>A free Pomodoro timer and noise generator. Your focus log stays in this browser.</p>
+  <p><a href="/disclaimer.html">Disclaimer</a> | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+</footer>
 
-        <!-- FAQ Section -->
-        <section class="mt-16 max-w-4xl mx-auto space-y-4">
-            <h2 class="text-xl font-bold text-white mb-6 text-center">Frequently Asked Questions (FAQ)</h2>
-            <details class="bg-slate-900 border border-slate-800 rounded-xl p-4 cursor-pointer">
-                <summary class="font-bold text-white text-sm">How do white, pink, and brown noises differ acoustically?</summary>
-                <p class="mt-3 text-xs text-slate-400 leading-relaxed">White noise distributes energy equally across frequencies. Pink noise features decreased high frequencies for a soothing rainfall sound. Brown noise drops higher octaves more steeply, yielding a deep, heavy waterfall rumble ideal for programming immersion.</p>
-            </details>
-            <details class="bg-slate-900 border border-slate-800 rounded-xl p-4 cursor-pointer">
-                <summary class="font-bold text-white text-sm">How does the Screen Wake Lock feature protect workflow?</summary>
-                <p class="mt-3 text-xs text-slate-400 leading-relaxed">By engaging the Screen Wake Lock API, your laptop or tablet display remains active throughout long sessions, preventing unexpected lockouts while keeping your streak tiles visible.</p>
-            </details>
-            <details class="bg-slate-900 border border-slate-800 rounded-xl p-4 cursor-pointer">
-                <summary class="font-bold text-white text-sm">Are focus streak tiles preserved across page reloads?</summary>
-                <p class="mt-3 text-xs text-slate-400 leading-relaxed">Yes. All completed pomodoros are preserved in browser LocalStorage, keeping your daily streak accurate even if you close or refresh the window.</p>
-            </details>
-        </section>
-    </main>
+<div id="global-ux-toast" class="toast" role="status" aria-live="polite"></div>
+<div id="sr-status" class="sr" role="status" aria-live="polite"></div>
 
-    <!-- Bottom AdSense -->
-    <div class="manual-ad-box" style="margin: 24px auto 16px;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-2228289204702106"
-             data-ad-slot="3416334507"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
+<!-- LOGIC START -->
+<script>
+(function () {
+  'use strict';
+  var SITE = 'https://us-pomodoro-soundscape.enjoy-onepage.com';
+  var TOOL_NAME = 'Deep Work Pomodoro & Ambient Noise';
+  var LOG_KEY = 'us-pomodoro-log-v1', SET_KEY = 'us-pomodoro-settings-v1', LEGACY = 'focus_grass_';
+  var MODES = {
+    focus: { label: 'Focus', min: 1, max: 180 },
+    short: { label: 'Short break', min: 1, max: 60 },
+    long: { label: 'Long break', min: 1, max: 60 }
+  };
+  var EVERY = 4, DAYS = 28, KEEP_DAYS = 400;
+  var S = { len: { focus: 25, short: 5, long: 15 }, mode: 'focus', state: 'idle', total: 1500000, left: 1500000, endAt: 0, done: 0, chime: true, timer: null };
+  var A = { ctx: null, src: null, gain: null, type: null, bufs: {}, vol: 25, bell: [], bellAt: 0 };
+  var W = { want: false, lock: null };
+  var LOG = {}, CAN_SAVE = true, baseTitle = document.title, toastTimer = null, srTimer = null, clearArm = 0, clearTimer = null, lastDay = '';
+  function $(id) { return document.getElementById(id); }
+  function on(id, ev, fn) { var el = $(id); if (el) el.addEventListener(ev, fn); }
+  function isInt(x) { return typeof x === 'number' && isFinite(x) && Math.floor(x) === x; }
+  function pad(n) { return String(n).padStart(2, '0'); }
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-6 text-center text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div>&copy; 2026 DeepFocus US. 100% Lossless Local Audio Synthesis Engine.</div>
-            <div class="flex gap-4">
-                <a href="/guides/guide.html" class="hover:text-slate-400">Focus Guide</a>
-                <a href="/privacy.html" class="hover:text-slate-400">Privacy Policy</a>
-                <a href="/terms.html" class="hover:text-slate-400">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
+  /* ---------- local dates (never UTC) ---------- */
+  function dayKey(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function dayFromKey(k) { var p = k.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function addDays(d, n) { return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+  function validDay(k) { return /^\d{4}-\d{2}-\d{2}$/.test(k) && dayKey(dayFromKey(k)) === k; }
+  function fmtMin(m) { if (m < 60) return m + ' min'; var h = Math.floor(m / 60), r = m % 60; return h + ' h' + (r ? ' ' + r + ' min' : ''); }
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
 
-    <!-- Toast Notification -->
-    <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-5 py-2.5 rounded-xl shadow-2xl text-xs font-bold transition-all duration-300 opacity-0 pointer-events-none z-50">
-        Copied to clipboard!
-    </div>
-
-    <script>
-        let timerInterval = null;
-        let isRunning = false;
-        let currentMode = 'focus';
-        let totalDuration = 25 * 60;
-        let remainingTime = 25 * 60;
-        let completedSessions = 0;
-        let wakeLockSentinel = null;
-
-        let audioCtx = null;
-        let noiseNode = null;
-        let gainNode = null;
-        let currentNoiseType = null;
-
-        function initAudio() {
-            if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
+  /* ---------- focus log (this browser only) ---------- */
+  function importLegacy() {
+    var out = {}, count = 0;
+    try { count = localStorage.length; } catch (e) { return out; }
+    for (var i = 0; i < count; i++) {
+      try {
+        var k = localStorage.key(i);
+        if (k && k.indexOf(LEGACY) === 0) {
+          var day = k.slice(LEGACY.length), n = JSON.parse(localStorage.getItem(k));
+          if (validDay(day) && isInt(n) && n >= 1 && n <= 1000) out[day] = { n: n, m: n * 25 };
         }
+      } catch (e) { /* skip this entry */ }
+    }
+    return out;
+  }
+  function readLog() {
+    var out = {};
+    try {
+      var raw = localStorage.getItem(LOG_KEY);
+      if (raw === null) return importLegacy();
+      var o = JSON.parse(raw);
+      if (!o || typeof o !== 'object' || Array.isArray(o)) return out;
+      Object.keys(o).forEach(function (k) {
+        var v = o[k];
+        if (validDay(k) && v && typeof v === 'object' && isInt(v.n) && v.n >= 1 && v.n <= 1000 && isInt(v.m) && v.m >= v.n && v.m <= v.n * 180) out[k] = { n: v.n, m: v.m };
+      });
+    } catch (e) { /* ignore */ }
+    return out;
+  }
+  function writeLog() {
+    var cut = dayKey(addDays(new Date(), -KEEP_DAYS)), o = {};
+    Object.keys(LOG).sort().forEach(function (k) { if (k >= cut) o[k] = LOG[k]; });
+    LOG = o;
+    try { localStorage.setItem(LOG_KEY, JSON.stringify(o)); return true; } catch (e) { return false; }
+  }
+  function addSession(end, minutes) {
+    var k = dayKey(end), cur = LOG[k] || { n: 0, m: 0 };
+    LOG[k] = { n: cur.n + 1, m: cur.m + minutes };
+    return writeLog();
+  }
+  function stats(today) {
+    var tk = dayKey(today), t = LOG[tk] || { n: 0, m: 0 }, streak = 0, days = [], sum = 0, active = 0;
+    for (var d = LOG[tk] ? today : addDays(today, -1); LOG[dayKey(d)]; d = addDays(d, -1)) streak++;
+    for (var i = DAYS - 1; i >= 0; i--) {
+      var dd = addDays(today, -i), e = LOG[dayKey(dd)];
+      days.push({ d: dd, n: e ? e.n : 0, m: e ? e.m : 0 });
+      if (e) { sum += e.m; active++; }
+    }
+    return { todayN: t.n, todayM: t.m, streak: streak, days: days, sum: sum, active: active };
+  }
+  function level(m) { return m <= 0 ? 0 : m < 30 ? 1 : m < 60 ? 2 : m < 120 ? 3 : 4; }
+  function renderLog() {
+    var now = new Date(), st = stats(now), g = $('grid');
+    lastDay = dayKey(now);
+    $('r-today').textContent = fmtMin(st.todayM);
+    $('r-today-n').textContent = plural(st.todayN, 'focus session', 'focus sessions') + ' today';
+    $('r-streak').textContent = plural(st.streak, 'day', 'days');
+    $('r-28').textContent = fmtMin(st.sum);
+    $('r-active').textContent = st.active + ' of ' + DAYS;
+    g.textContent = '';
+    st.days.forEach(function (x, i) {
+      var li = document.createElement('li'), sp = document.createElement('span');
+      var label = x.d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) + ': ' +
+        (x.n ? plural(x.n, 'session', 'sessions') + ', ' + fmtMin(x.m) : 'no focus sessions');
+      var lv = level(x.m);
+      li.className = (lv ? 'lv' + lv : '') + (i === DAYS - 1 ? ' today' : '');
+      li.title = label; sp.className = 'sr'; sp.textContent = label;
+      li.appendChild(sp); g.appendChild(li);
+    });
+    var f = { month: 'short', day: 'numeric' };
+    $('g-range').textContent = st.days[0].d.toLocaleDateString('en-US', f) + ' – ' + st.days[DAYS - 1].d.toLocaleDateString('en-US', f) + ' (today, last square)';
+  }
+  function checkDay() { if (dayKey(new Date()) !== lastDay) renderLog(); }
 
-        function createNoiseBuffer(type) {
-            const bufferSize = audioCtx.sampleRate * 2;
-            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-            const data = buffer.getChannelData(0);
+  /* ---------- settings ---------- */
+  function parseLen(mode, raw) {
+    var v = String(raw).trim(), M = MODES[mode];
+    if (!/^\d{1,3}$/.test(v)) return null;
+    var n = Number(v);
+    return n >= M.min && n <= M.max ? n : null;
+  }
+  function saveSettings() {
+    try { localStorage.setItem(SET_KEY, JSON.stringify({ f: S.len.focus, s: S.len.short, l: S.len.long, v: A.vol, c: S.chime })); } catch (e) { /* ignore */ }
+  }
+  function loadSettings() {
+    try {
+      var o = JSON.parse(localStorage.getItem(SET_KEY) || 'null');
+      if (!o || typeof o !== 'object') return;
+      var f = parseLen('focus', o.f), s = parseLen('short', o.s), l = parseLen('long', o.l);
+      if (f !== null) S.len.focus = f;
+      if (s !== null) S.len.short = s;
+      if (l !== null) S.len.long = l;
+      if (isInt(o.v) && o.v >= 0 && o.v <= 100) A.vol = o.v;
+      if (typeof o.c === 'boolean') S.chime = o.c;
+    } catch (e) { /* ignore */ }
+  }
+  function query() { return '?f=' + S.len.focus + '&s=' + S.len.short + '&l=' + S.len.long; }
+  function link() { return SITE + '/' + query(); }
+  function updateUrl() { try { history.replaceState(null, '', location.pathname + query()); } catch (e) { /* ignore */ } }
 
-            let lastOut = 0.0;
-            let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+  /* ---------- audio: chime on the audio clock ---------- */
+  function initAudio() {
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    if (!A.ctx) { try { A.ctx = new AC(); } catch (e) { return null; } }
+    if (A.ctx.state === 'suspended' && A.ctx.resume) { try { A.ctx.resume().catch(function () {}); } catch (e) { /* ignore */ } }
+    return A.ctx;
+  }
+  function beep(at) {
+    var ctx = A.ctx, nodes = [];
+    [0, 0.35, 0.7].forEach(function (off) {
+      var o = ctx.createOscillator(), g = ctx.createGain(), t = at + off;
+      o.type = 'sine'; o.frequency.value = 880;
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.3, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.3);
+      o.connect(g); g.connect(ctx.destination);
+      o.start(t); o.stop(t + 0.32);
+      nodes.push(o);
+    });
+    return nodes;
+  }
+  function cancelBell() {
+    A.bell.forEach(function (o) { try { o.stop(0); } catch (e) { /* ignore */ } try { o.disconnect(); } catch (e) { /* ignore */ } });
+    A.bell = []; A.bellAt = 0;
+  }
+  function scheduleBell(ms) {
+    cancelBell();
+    if (!S.chime || !A.ctx) return;
+    try { A.bellAt = A.ctx.currentTime + ms / 1000; A.bell = beep(A.bellAt); } catch (e) { A.bell = []; A.bellAt = 0; }
+  }
+  function ringNow() {
+    if (S.chime && A.ctx && (!A.bell.length || A.ctx.currentTime < A.bellAt - 0.05)) {
+      cancelBell();
+      try { beep(A.ctx.currentTime + 0.05); } catch (e) { /* ignore */ }
+    }
+    A.bell = []; A.bellAt = 0;
+  }
 
-            for (let i = 0; i < bufferSize; i++) {
-                const white = Math.random() * 2 - 1;
-                if (type === 'white') {
-                    data[i] = white * 0.3;
-                } else if (type === 'pink') {
-                    b0 = 0.99886 * b0 + white * 0.0555179;
-                    b1 = 0.99332 * b1 + white * 0.0750759;
-                    b2 = 0.96900 * b2 + white * 0.1538520;
-                    b3 = 0.86650 * b3 + white * 0.3104856;
-                    b4 = 0.55000 * b4 + white * 0.5329522;
-                    b5 = -0.7616 * b5 - white * 0.0168980;
-                    data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.11;
-                    b6 = white * 0.115926;
-                } else if (type === 'brown') {
-                    lastOut = (lastOut + (0.02 * white)) / 1.02;
-                    data[i] = lastOut * 1.5;
-                }
-            }
-            return buffer;
-        }
+  /* ---------- audio: seamless noise loops ---------- */
+  function makeNoise(type, ctx) {
+    var sr = ctx.sampleRate, N = Math.floor(sr * 10), F = Math.floor(sr * 0.5), x = new Float32Array(N + F);
+    var b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0, last = 0, i;
+    for (i = 0; i < N + F; i++) {
+      var w = Math.random() * 2 - 1;
+      if (type === 'white') { x[i] = w; }
+      else if (type === 'pink') {
+        b0 = 0.99886 * b0 + w * 0.0555179; b1 = 0.99332 * b1 + w * 0.0750759; b2 = 0.96900 * b2 + w * 0.1538520;
+        b3 = 0.86650 * b3 + w * 0.3104856; b4 = 0.55000 * b4 + w * 0.5329522; b5 = -0.7616 * b5 - w * 0.0168980;
+        x[i] = b0 + b1 + b2 + b3 + b4 + b5 + b6 + w * 0.5362; b6 = w * 0.115926;
+      } else { last = (last + 0.02 * w) / 1.02; x[i] = last; }
+    }
+    var buf = ctx.createBuffer(1, N, sr), d = buf.getChannelData(0), sum = 0;
+    for (i = 0; i < N; i++) {
+      var v = x[i];
+      if (i < F) { var t = i / F; v = x[i] * Math.sin(t * Math.PI / 2) + x[N + i] * Math.cos(t * Math.PI / 2); }
+      d[i] = v; sum += v * v;
+    }
+    var k = 0.15 / Math.sqrt(sum / N);
+    for (i = 0; i < N; i++) d[i] = Math.max(-1, Math.min(1, d[i] * k));
+    return buf;
+  }
+  function holdAt(p, now) { if (p.cancelAndHoldAtTime) p.cancelAndHoldAtTime(now); else { p.cancelScheduledValues(now); p.setValueAtTime(p.value, now); } }
+  function stopNoise() {
+    if (A.src && A.ctx) {
+      var src = A.src, p = A.gain.gain, now = A.ctx.currentTime;
+      try { holdAt(p, now); p.linearRampToValueAtTime(0, now + 0.15); src.stop(now + 0.16); }
+      catch (e) { try { src.stop(); } catch (e2) { /* ignore */ } }
+    }
+    A.src = null; A.gain = null; A.type = null;
+  }
+  function renderNoise() {
+    ['white', 'pink', 'brown'].forEach(function (t) { var b = $('n-' + t); if (b) b.setAttribute('aria-pressed', A.type === t ? 'true' : 'false'); });
+    $('noise-status').textContent = A.type ? A.type.charAt(0).toUpperCase() + A.type.slice(1) + ' noise is playing.' : 'Sound is off.';
+  }
+  function setNoise(type) {
+    var was = A.type;
+    stopNoise();
+    if (!type || type === was) { renderNoise(); return; }
+    var ctx = initAudio();
+    if (!ctx) { renderNoise(); showToastNotification('This browser cannot play generated sound.'); return; }
+    try {
+      var buf = A.bufs[type] || (A.bufs[type] = makeNoise(type, ctx));
+      var src = ctx.createBufferSource(), g = ctx.createGain(), now = ctx.currentTime;
+      src.buffer = buf; src.loop = true;
+      g.gain.setValueAtTime(0, now);
+      g.gain.linearRampToValueAtTime(A.vol / 100, now + 0.3);
+      src.connect(g); g.connect(ctx.destination); src.start(now);
+      A.src = src; A.gain = g; A.type = type;
+    } catch (e) {
+      A.src = null; A.gain = null; A.type = null;
+      showToastNotification('Could not start the sound in this browser.');
+    }
+    renderNoise();
+  }
 
-        function toggleNoise(type) {
-            initAudio();
-            if (currentNoiseType === type) {
-                stopNoise();
-                return;
-            }
-            stopNoise();
-            currentNoiseType = type;
+  /* ---------- timer (deadline on the device clock) ---------- */
+  function lenMs(mode) { return S.len[mode] * 60000; }
+  function clock(ms) { var s = Math.ceil(Math.max(0, ms) / 1000); return pad(Math.floor(s / 60)) + ':' + pad(s % 60); }
+  function renderTimer() {
+    var t = clock(S.left), pct = S.total ? Math.min(100, Math.max(0, (S.total - S.left) / S.total * 100)) : 0;
+    $('time').textContent = t;
+    $('bar').style.width = pct.toFixed(2) + '%';
+    $('bar-wrap').setAttribute('aria-valuenow', String(Math.round(pct)));
+    $('phase').textContent = MODES[S.mode].label + (S.mode === 'focus' ? ' · pomodoro ' + (S.done % EVERY + 1) + ' of ' + EVERY : '') +
+      (S.state === 'paused' ? ' · paused' : S.state === 'idle' ? ' · ready' : '');
+    $('btn-start').textContent = S.state === 'running' ? '⏸ Pause' : S.state === 'paused' ? '▶ Resume' : '▶ Start';
+    $('timer-card').className = 'card ' + (S.mode === 'focus' ? 'mode-focus' : 'mode-break');
+    document.title = S.state === 'idle' ? baseTitle : t + ' ' + MODES[S.mode].label + ' | Deep Work Pomodoro';
+  }
+  function setMode(mode) {
+    clearInterval(S.timer); S.timer = null; cancelBell();
+    S.mode = mode; S.state = 'idle'; S.total = lenMs(mode); S.left = S.total; S.endAt = 0;
+    var r = document.querySelectorAll('input[name="mode"]');
+    for (var i = 0; i < r.length; i++) r[i].checked = r[i].value === mode;
+    renderTimer();
+  }
+  function start() {
+    if (S.state === 'running') return;
+    initAudio();
+    S.endAt = Date.now() + S.left; S.state = 'running';
+    scheduleBell(S.left);
+    clearInterval(S.timer); S.timer = setInterval(tick, 250);
+    var fresh = S.left === S.total;
+    renderTimer();
+    say((fresh ? MODES[S.mode].label + ' started: ' : 'Resumed: ') + clock(S.left) + ' left.');
+  }
+  function pause() {
+    if (S.state !== 'running') return;
+    S.left = Math.max(0, S.endAt - Date.now()); S.state = 'paused';
+    clearInterval(S.timer); S.timer = null; cancelBell();
+    renderTimer(); say('Paused with ' + clock(S.left) + ' left.');
+  }
+  function tick() {
+    if (S.state !== 'running') return;
+    var left = S.endAt - Date.now();
+    if (left <= 0) complete(); else { S.left = left; renderTimer(); }
+  }
+  function complete() {
+    clearInterval(S.timer); S.timer = null;
+    var mode = S.mode, end = new Date(S.endAt), next, msg;
+    ringNow();
+    if (mode === 'focus') {
+      var mins = Math.round(S.total / 60000), saved = addSession(end, mins);
+      S.done++;
+      next = S.done % EVERY === 0 ? 'long' : 'short';
+      msg = 'Focus session done: ' + fmtMin(mins) + ' logged. Time for a ' + S.len[next] + '-minute ' + (next === 'long' ? 'long break.' : 'break.');
+      if (!saved) msg += ' Your browser blocked saving, so the log resets when you close this page.';
+      renderLog();
+    } else {
+      next = 'focus'; msg = 'Break is over. Press Start when you are ready to focus.';
+    }
+    setMode(next);
+    showToastNotification(msg); say(msg);
+  }
 
-            const buffer = createNoiseBuffer(type);
-            noiseNode = audioCtx.createBufferSource();
-            noiseNode.buffer = buffer;
-            noiseNode.loop = true;
+  /* ---------- screen wake lock ---------- */
+  function renderWake() { var b = $('btn-wake'); if (!b) return; b.setAttribute('aria-pressed', W.want ? 'true' : 'false'); b.textContent = '💡 Keep screen on: ' + (W.want ? 'On' : 'Off'); }
+  function acquire() {
+    return navigator.wakeLock.request('screen').then(function (lock) {
+      if (!W.want) { lock.release().catch(function () {}); return; }
+      W.lock = lock;
+      lock.addEventListener('release', function () { if (W.lock === lock) W.lock = null; });
+    });
+  }
 
-            gainNode = audioCtx.createGain();
-            const vol = parseFloat(document.getElementById('volumeSlider').value) / 100;
-            gainNode.gain.setValueAtTime(vol, audioCtx.currentTime);
+  /* ---------- messages, copy and share ---------- */
+  function say(msg) { var el = $('sr-status'); if (!el) return; clearTimeout(srTimer); el.textContent = ''; srTimer = setTimeout(function () { el.textContent = msg; }, 100); }
+  function showToastNotification(msg) {
+    var t = $('global-ux-toast'); if (!t) return;
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2200);
+  }
+  function summary() {
+    var st = stats(new Date());
+    if (!st.sum && !st.streak) return '';
+    return '🍅 Today: ' + plural(st.todayN, 'focus session', 'focus sessions') + ', ' + fmtMin(st.todayM) + ' · streak: ' + plural(st.streak, 'day', 'days') +
+      ' · last 28 days: ' + fmtMin(st.sum) + '.\n👉 ' + TOOL_NAME + ': ' + link();
+  }
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    showToastNotification(ok ? 'Copied! Paste it anywhere to share.' : 'Could not copy. Please select the text and copy it yourself.');
+  }
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { showToastNotification('Copied! Paste it anywhere to share.'); }, function () { fallbackCopy(text); });
+    } else { fallbackCopy(text); }
+  }
 
-            noiseNode.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-            noiseNode.start();
+  /* ---------- events ---------- */
+  on('btn-start', 'click', function () { if (S.state === 'running') pause(); else start(); });
+  on('btn-reset', 'click', function () { setMode(S.mode); say(MODES[S.mode].label + ' reset to ' + clock(S.left) + '.'); });
+  on('btn-skip', 'click', function () {
+    var next = S.mode === 'focus' ? 'short' : 'focus';
+    setMode(next);
+    showToastNotification('Skipped to ' + MODES[next].label.toLowerCase() + '. Nothing was logged.');
+  });
+  on('modes', 'change', function (e) {
+    var t = e.target;
+    if (t && t.name === 'mode' && MODES[t.value]) { var wasBusy = S.state !== 'idle'; setMode(t.value); if (wasBusy) showToastNotification('Switched to ' + MODES[t.value].label.toLowerCase() + '. The timer was reset.'); }
+  });
+  ['focus', 'short', 'long'].forEach(function (mode) {
+    var id = 'len-' + mode, err = 'err-' + mode;
+    on(id, 'input', function () {
+      var n = parseLen(mode, $(id).value);
+      if (n === null) return;
+      $(err).textContent = ''; $(id).removeAttribute('aria-invalid');
+      if (S.len[mode] === n) return;
+      S.len[mode] = n; saveSettings(); updateUrl();
+      if (S.mode === mode && S.state === 'idle') { S.total = lenMs(mode); S.left = S.total; renderTimer(); $('len-note').textContent = 'Every fourth finished focus session is followed by a long break.'; }
+      else if (S.mode === mode) $('len-note').textContent = 'The new length starts with the next ' + MODES[mode].label.toLowerCase() + '.';
+    });
+    on(id, 'change', function () {
+      if (parseLen(mode, $(id).value) !== null) return;
+      var M = MODES[mode];
+      $(err).textContent = 'Enter a whole number from ' + M.min + ' to ' + M.max + '. Still using ' + S.len[mode] + ' min.';
+      $(id).setAttribute('aria-invalid', 'true');
+    });
+  });
+  on('chime', 'change', function () {
+    S.chime = !!$('chime').checked; saveSettings();
+    if (!S.chime) cancelBell(); else if (S.state === 'running') scheduleBell(S.endAt - Date.now());
+  });
+  ['white', 'pink', 'brown'].forEach(function (t) { on('n-' + t, 'click', function () { setNoise(t); }); });
+  on('vol', 'input', function () {
+    var v = Number($('vol').value);
+    if (!isInt(v) || v < 0 || v > 100) return;
+    A.vol = v; $('vol-out').textContent = v + '%';
+    if (A.gain && A.ctx) { var p = A.gain.gain, now = A.ctx.currentTime; try { holdAt(p, now); p.setTargetAtTime(v / 100, now, 0.03); } catch (e) { /* ignore */ } }
+  });
+  on('vol', 'change', saveSettings);
+  on('btn-wake', 'click', function () {
+    if (!('wakeLock' in navigator)) { showToastNotification('This browser cannot keep the screen on. Change the screen timeout in your device settings instead.'); return; }
+    if (W.want) {
+      W.want = false; var l = W.lock; W.lock = null;
+      if (l) l.release().catch(function () {});
+      renderWake(); showToastNotification('The screen can turn off again as usual.');
+      return;
+    }
+    W.want = true; renderWake();
+    acquire().then(function () { showToastNotification('The screen will stay on while this page is open.'); },
+      function () { W.want = false; renderWake(); showToastNotification('Your browser did not allow keeping the screen on (for example in battery saver mode).'); });
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState !== 'visible') return;
+    if (W.want && !W.lock && navigator.wakeLock) acquire().catch(function () {});
+    tick(); checkDay();
+  });
+  on('btn-copy', 'click', function () { var t = summary(); if (t) copyText(t); else showToastNotification('Finish a focus session first.'); });
+  on('btn-share', 'click', function () {
+    var text = summary(); if (!text) { showToastNotification('Finish a focus session first.'); return; }
+    if (navigator.share) { navigator.share({ title: TOOL_NAME, text: text, url: link() }).catch(function (e) { if (!e || e.name !== 'AbortError') copyText(text); }); }
+    else { copyText(text); }
+  });
+  on('btn-clear', 'click', function () {
+    var b = $('btn-clear');
+    if (Date.now() > clearArm) {
+      clearArm = Date.now() + 5000; b.textContent = 'Click again to clear';
+      clearTimeout(clearTimer); clearTimer = setTimeout(function () { clearArm = 0; b.textContent = 'Clear log'; }, 5000);
+      return;
+    }
+    clearArm = 0; clearTimeout(clearTimer); b.textContent = 'Clear log';
+    LOG = {};
+    try {
+      localStorage.setItem(LOG_KEY, '{}');
+      for (var i = localStorage.length - 1; i >= 0; i--) { var k = localStorage.key(i); if (k && k.indexOf(LEGACY) === 0) localStorage.removeItem(k); }
+    } catch (e) { /* ignore */ }
+    renderLog(); showToastNotification('Your focus log was cleared from this browser.');
+  });
 
-            updateNoiseUI();
-        }
-
-        function stopNoise() {
-            if (noiseNode) {
-                try { noiseNode.stop(); noiseNode.disconnect(); } catch(e) {}
-                noiseNode = null;
-            }
-            currentNoiseType = null;
-            updateNoiseUI();
-        }
-
-        function changeVolume(val) {
-            document.getElementById('volumeText').textContent = val + '%';
-            if (gainNode && audioCtx) {
-                gainNode.gain.setValueAtTime(parseFloat(val) / 100, audioCtx.currentTime);
-            }
-        }
-
-        function updateNoiseUI() {
-            const btns = { 'white': 'noiseBtnWhite', 'pink': 'noiseBtnPink', 'brown': 'noiseBtnBrown' };
-            for (const [k, id] of Object.entries(btns)) {
-                const el = document.getElementById(id);
-                if (currentNoiseType === k) {
-                    el.className = 'py-2.5 px-2 bg-emerald-600 text-white border border-emerald-500 text-xs rounded-xl font-bold shadow';
-                } else {
-                    el.className = 'py-2.5 px-2 bg-slate-950 border border-slate-800 hover:border-slate-700 text-xs rounded-xl text-slate-300 font-semibold transition';
-                }
-            }
-            document.getElementById('noiseStatus').textContent = currentNoiseType ? `${currentNoiseType.toUpperCase()} Playing` : 'Off';
-        }
-
-        function setMode(mode, minutes) {
-            currentMode = mode;
-            totalDuration = minutes * 60;
-            remainingTime = totalDuration;
-            clearInterval(timerInterval);
-            isRunning = false;
-            document.getElementById('playIcon').textContent = '▶';
-            document.getElementById('playText').textContent = 'Start Session';
-
-            document.getElementById('modeBtnFocus').className = mode === 'focus' ? 'py-3 px-2 bg-emerald-600 text-white font-bold rounded-xl text-xs sm:text-sm border border-emerald-500' : 'py-3 px-2 bg-slate-800 text-slate-300 hover:text-white font-bold rounded-xl text-xs sm:text-sm border border-slate-700';
-            document.getElementById('modeBtnShort').className = mode === 'shortBreak' ? 'py-3 px-2 bg-emerald-600 text-white font-bold rounded-xl text-xs sm:text-sm border border-emerald-500' : 'py-3 px-2 bg-slate-800 text-slate-300 hover:text-white font-bold rounded-xl text-xs sm:text-sm border border-slate-700';
-            document.getElementById('modeBtnLong').className = mode === 'longBreak' ? 'py-3 px-2 bg-emerald-600 text-white font-bold rounded-xl text-xs sm:text-sm border border-emerald-500' : 'py-3 px-2 bg-slate-800 text-slate-300 hover:text-white font-bold rounded-xl text-xs sm:text-sm border border-slate-700';
-
-            document.getElementById('sessionLabel').textContent = mode === 'focus' ? 'Focus Session Ready' : 'Break Session Ready';
-            updateTimerUI();
-        }
-
-        function applyCustomTime() {
-            const mins = parseInt(document.getElementById('customMinutes').value.replace(/,/g, '')) || 25;
-            setMode('custom', mins);
-        }
-
-        function formatTime(sec) {
-            const m = Math.floor(sec / 60);
-            const s = sec % 60;
-            return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-        }
-
-        function updateTimerUI() {
-            document.getElementById('timerDisplay').textContent = formatTime(remainingTime);
-            const pct = Math.min(100, Math.max(0, ((totalDuration - remainingTime) / totalDuration) * 100));
-            document.getElementById('sessionProgressBar').style.width = pct + '%';
-        }
-
-        function toggleTimer() {
-            initAudio();
-            if (isRunning) {
-                clearInterval(timerInterval);
-                isRunning = false;
-                document.getElementById('playIcon').textContent = '▶';
-                document.getElementById('playText').textContent = 'Resume';
-            } else {
-                isRunning = true;
-                document.getElementById('playIcon').textContent = '⏸';
-                document.getElementById('playText').textContent = 'Pause';
-                timerInterval = setInterval(() => {
-                    remainingTime--;
-                    if (remainingTime <= 0) {
-                        clearInterval(timerInterval);
-                        isRunning = false;
-                        onSessionComplete();
-                    }
-                    updateTimerUI();
-                }, 1000);
-            }
-        }
-
-        function resetTimer() {
-            clearInterval(timerInterval);
-            isRunning = false;
-            remainingTime = totalDuration;
-            document.getElementById('playIcon').textContent = '▶';
-            document.getElementById('playText').textContent = 'Start Session';
-            updateTimerUI();
-        }
-
-        function onSessionComplete() {
-            if (currentMode === 'focus' || currentMode === 'custom') {
-                completedSessions++;
-                saveGrass();
-                renderGrass();
-                showToastNotification('🎉 Pomodoro Completed! Take a 5m break.');
-            } else {
-                showToastNotification('Break finished. Ready to focus again!');
-            }
-            setMode('shortBreak', 5);
-        }
-
-        async function toggleWakeLock() {
-            if ('wakeLock' in navigator) {
-                try {
-                    if (wakeLockSentinel) {
-                        await wakeLockSentinel.release();
-                        wakeLockSentinel = null;
-                        document.getElementById('wakeIcon').textContent = '💡';
-                        document.getElementById('wakeText').textContent = 'Keep Screen OFF';
-                    } else {
-                        wakeLockSentinel = await navigator.wakeLock.request('screen');
-                        document.getElementById('wakeIcon').textContent = '⚡';
-                        document.getElementById('wakeText').textContent = 'Keep Screen ON';
-                    }
-                } catch(e) {}
-            }
-        }
-
-        function initGrass() {
-            try {
-                const today = new Date().toISOString().slice(0, 10);
-                const stored = JSON.parse(localStorage.getItem('focus_grass_' + today) || '0');
-                completedSessions = stored;
-            } catch(e) {
-                completedSessions = 0;
-            }
-            renderGrass();
-        }
-
-        function saveGrass() {
-            try {
-                const today = new Date().toISOString().slice(0, 10);
-                localStorage.setItem('focus_grass_' + today, JSON.stringify(completedSessions));
-            } catch(e) {}
-        }
-
-        function renderGrass() {
-            const grid = document.getElementById('grassGrid');
-            grid.innerHTML = '';
-            for (let i = 0; i < 28; i++) {
-                const tile = document.createElement('div');
-                tile.className = i < completedSessions ? 'h-6 rounded bg-emerald-500 border border-emerald-400 transition-all' : 'h-6 rounded bg-slate-900 border border-slate-800';
-                grid.appendChild(tile);
-            }
-            document.getElementById('completedSessionsText').textContent = `${completedSessions} Completed (${completedSessions * 25}m)`;
-        }
-
-        function showToastNotification(msg) {
-            const toast = document.getElementById('toastNotification');
-            toast.textContent = msg;
-            toast.classList.remove('opacity-0', 'pointer-events-none');
-            setTimeout(() => {
-                toast.classList.add('opacity-0', 'pointer-events-none');
-            }, 2200);
-        }
-
-        function copyFocusResults() {
-            const count = completedSessions;
-            const mins = count * 25;
-            const text = `[Daily Deep Work Focus Report]
-Completed Pomodoros: ${count}
-Total Focus Time: ${mins} minutes
-Current Timer: ${formatTime(remainingTime)}
-
-👉 Deep Work Pomodoro Timer: https://us-pomodoro-soundscape.enjoy-onepage.com/`;
-
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(text).then(() => showToastNotification('Copied to clipboard!'));
-            } else {
-                const ta = document.createElement('textarea');
-                ta.value = text;
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand('copy');
-                document.body.removeChild(ta);
-                showToastNotification('Copied to clipboard!');
-            }
-        }
-
-        initGrass();
-        updateTimerUI();
-    </script>
+  /* ---------- start: saved settings, then link values (?f=1-180&s=1-60&l=1-60) ---------- */
+  (function init() {
+    try { var tk = 'us-pomodoro-probe'; localStorage.setItem(tk, '1'); localStorage.removeItem(tk); } catch (e) { CAN_SAVE = false; }
+    loadSettings();
+    var q; try { q = new URLSearchParams(location.search); } catch (e) { q = null; }
+    if (q) {
+      [['f', 'focus'], ['s', 'short'], ['l', 'long']].forEach(function (p) {
+        var v = q.get(p[0]);
+        if (v !== null) { var n = parseLen(p[1], v); if (n !== null) S.len[p[1]] = n; }
+      });
+    }
+    $('len-focus').value = S.len.focus; $('len-short').value = S.len.short; $('len-long').value = S.len.long;
+    $('vol').value = A.vol; $('vol-out').textContent = A.vol + '%';
+    $('chime').checked = S.chime;
+    if (!CAN_SAVE) $('save-note').textContent = 'Your browser blocked saving, so the log and settings reset when you close this page.';
+    LOG = readLog();
+    setMode('focus'); renderLog(); renderNoise(); renderWake();
+    setInterval(checkDay, 30000);
+  })();
+})();
+</script>
+<!-- LOGIC END -->
 </body>
 </html>
